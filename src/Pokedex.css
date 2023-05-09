@@ -1,0 +1,7 @@
+.Pokedex{
+    display:flex;
+    background-color: pink;
+    border: 1px solid black;
+    width: 90vw;
+    height: 60vh;
+}
