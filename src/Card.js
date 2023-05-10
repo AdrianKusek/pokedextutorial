@@ -1,29 +1,17 @@
-import React, {Component} from "react";
-import "./Card.css"
-
-
-
-
-
+import React,{Component} from "react";
+const PokeAPI = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
 class Card extends Component{
-
-    // static defaultProps = data;
-   
-   
     render(){
-       
-        return(
-            <div className="Card">
-             <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.props.id}.png `}/> 
-             <div className="Card-info">
-             {this.props.name} {this.props.type} {this.props.base_experience}
+        let imgSource = `${PokeAPI}${this.props.id}.png`
+        return (
+        <div>
+            <h1>{this.props.name}</h1>
+            <img src={imgSource}/>
 
-             </div>
-
-            </div>
-
+        </div>    
+        
         )
     }
 }
 
-export default Card;
+export default Card
